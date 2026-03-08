@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+   Install:
+      runtime-version:
+         nodejs: 18
+      commands:
+       - echo "Installing dependenicies............"
+       - npm ci --legacy-peer-deps
+
+   build:
+      commands:
+       - echo "building the app"
+       - npm run build
+
+artifacts:
+  files:
+  - '**/*'
+  base-directory: dist
+  discard-paths: no
+       
+       
+
+
+       
+       
